@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Concerts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .sidenavbutton{
+  display:inline-block;
+  margin:25px;
+  background-color: rgba(0,0,0,0);
+}
+.parallax-container {
+      height:  900px;
+    }
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+            <div class="sidenavbutton">
+                    <ul id="slide-out" class="sidenav">
+                        <li><div class="user-view">
+                        <div class="background">
+                            <img src="https://officialaaroncarey.com/wp-content/uploads/2019/01/9.AaronCarey.jpg">
+                        </div>
+                        <a href="/"><img class="circle" src="https://officialaaroncarey.com/wp-content/uploads/2019/01/9.AaronCarey.jpg"></a>
+                        <a href="/"><span class="white-text name">Aaron Carey</span></a>
+                        <a href="/"><span class="white-text email">AaronCarey.com</span></a>
+                        </div></li>
+                        <li><a href="/concerts"><i class="material-icons">cloud</i>Concerts</a></li>
+                        <li><a href="#!">Second Link</a></li>
+                        <li><div class="divider"></div></li>
+                        <li><a class="subheader">Subheader</a></li>
+                        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                    </ul>
+                        
+                    <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating pulse"><i class="material-icons">menu</i></a>&nbsp;
+                </div>  
+            <div class="parallax"><img style="height: 1600px" src="https://officialaaroncarey.com/wp-content/uploads/2019/01/1.AaronCarey.jpg"></div>
+    </div>
+    
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        var uluru = {lat: 34.047544, lng: -118.540370};
+        var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJm2Kc_4X9BBopErJMtAK2JJ66uq40-pI&callback=initMap"
+    async defer></script>
+    <script>M.AutoInit();</script>
+    <div class="parallax-container">
+        <div class="parallax"><img style="height: 1200px" src="https://officialaaroncarey.com/wp-content/uploads/2019/01/12.AaronCarey.jpg"></div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+          });</script>
+</body>
+</html>
