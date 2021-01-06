@@ -5,3 +5,8 @@ This is an Artist Page for Aaron Carey. Get to know the artist and check out son
 ```bash
 nodemon server.js
 ```
+# deployment
+To Configure our nginx file
+```bash
+sudo nano /etc/nginx/nginx.conf
+```
